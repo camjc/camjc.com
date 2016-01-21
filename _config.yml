@@ -1,0 +1,17 @@
+# Site settings
+title: CamJC Lead Front–End Developer Portfolio
+email: hi@camjc.com
+description: > # this means to ignore newlines until "baseurl:"
+  Cameron Chamberlain is a Lead Front–End Developer living in Melbourne, Australia.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "https://camjc.com" # the base hostname & protocol for your site
+twitter_username: phantom_cameron
+github_username:  camjc
+
+# Build settings
+markdown: kramdown
+
+gems:
+- jekyll-compass
+
+permalink: /:title.html

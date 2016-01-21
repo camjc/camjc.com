@@ -1,0 +1,26 @@
+---
+layout: post
+title:  "hessien"
+tagline: "Ambient electronic band from AU & UK."
+categories: website
+desktops:
+- hessien2_large.w1280
+- hessien_large.w1280
+mobiles:
+- hessien_small
+technologies:
+- HTML5
+- CSS3
+- jQuery
+- Soundcloud Integration
+- Vimeo Integration
+link: http://hessien.net/
+---
+
+This site was created for an album launch. It uses [HTML5][HTML5] and CSS3, along with some jQuery for interactivity. I integrated a [SoundCloud player][SoundCloud] to show the band's latest work, and a [Vimeo player][Vimeo] to show their music videos. 
+
+[HTML5]: http://validator.w3.org/check?uri=http%3A%2F%2Fhessien.net%2F "Valid HTML5"
+[CSS3]: http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fhessien.net%2F "Valid CSS3"
+[jQuery]: http://jquery.com/
+[SoundCloud]: http://soundcloud.com/ "SoundCloud"
+[Vimeo]: http://soundcloud.com/ "Vimeo"

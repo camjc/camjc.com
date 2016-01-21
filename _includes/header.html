@@ -1,0 +1,23 @@
+<nav class='primary' role='navigation'>
+  <div class='contactinfo' role='complementary'>
+    <a class='logo' href='/'></a>
+    <div class='name'>
+      Cameron J Chamberlain
+    </div>
+    <div class='details'>
+      <div class='phone'>
+        +61 0431 993 870
+      </div>
+      <div class='email'>
+        <a href='mailto:hi@camjc.com'>
+          hi@camjc.com
+        </a>
+      </div>
+      <a href='#' id='nav-toggle' aria-hidden='false'><span>&#8801;</span></a>
+    </div>
+  </div>
+  <ul class='hidden'>
+    {% for post in site.posts %}
+    <li><a class='{% if post.url == page.url %}active{% endif %}' href='{{ post.url }}'>{{ post.title }}</a></li>{% endfor %}
+  </ul>
+</nav>

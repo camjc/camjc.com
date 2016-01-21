@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<div class='container {{ page.categories }}' role='main'>
+	<div class='post' id='{{ page.title | remove:' .' }}'>
+		<h1>{% if page.link %}<a href="{{ page.link }}">{% endif %}{{ page.title }}{% if page.link %}</a>{% endif %}</h1>
+		{% if page.tagline %}<h2>{{ page.tagline }}</h2>{% endif %}
+		<div class="description">
+			{{ content | hyphenate }}
+			{% if page.noextralink != "true" %}{% if page.link %}<a href="{{ page.link }}">Go to {{ page.link | remove:'http://' | remove:'https://' | split:'/' | first }}</a>{% endif %}{% endif %}
+		</div>
+		{% if page.desktops %}
+		<div class="large_images">
+			{% for desktop in page.desktops %}
+				<a href="/assets/images/{{ desktop }}.jpg"><img class="large" src="/assets/images/{{ desktop }}.jpg" alt="Large Screenshot {{ desktop }}" width="1280" height="780"></a>
+			{% endfor %}
+		</div>
+		{% endif %}
+		{% if page.mobiles %}
+		<div class="small_images">
+			{% for mobile in page.mobiles %}
+				<a href="/assets/images/{{ mobile }}.jpg"><img class="small {% if forloop.first %}first{% endif %} {% if forloop.last %}last{% endif %}" src="/assets/images/{{ mobile }}.jpg" alt="Small Screenshot {{ mobile }}" width="402" height="992"></a>
+			{% endfor %}
+		</div>
+		{% endif %}
+		<div class="description">
+		{% if page.noextralink != "true" %}{% if page.link %}<br><a href="{{ page.link }}">Go to {{ page.link | remove:'http://' | remove:'https://' | split:'/' | first }}</a>{% endif %}{% endif %}
+		</div>
+	</div>
+</div>

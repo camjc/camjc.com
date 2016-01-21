@@ -1,0 +1,322 @@
+@import compass/css3
+@import compass/css3/user-interface
+@import compass/utilities/general/clearfix
+@import susyone
+@import typeplate-scss/_typeplate_camjc.scss
+
+$public_path: "/assets/images/"
+
+=svg-wfallback($name)
+    background-image: url("#{$public_path}#{$name}.png")
+    background-image: none, url("#{$public_path}#{$name}.svg")
+
+=lichtenstein($framehighlight: #d8f1f2, $frameshadow: #018f40, $framesurround: #1c1c1c)
+    //Normal Border
+    border: 1em solid $framehighlight
+    border-bottom-color: $frameshadow
+    border-right-color: $frameshadow
+    //Outer Border
+    box-shadow: 0 0 0 0.5em $framesurround
+    //Inner Border
+    padding: 0.5em
+    background-color: $framesurround
+    +box-sizing(border-box)
+
+$cAccent: #74cae6
+$cBackground: #525b5f
+$cText: #f5f4ed
+$wSidebar: 16em
+
+html
+    background-color: $cBackground
+    -moz-font-feature-settings: "kern" 1
+    -webkit-font-feature-settings: "kern" 1
+    font-feature-settings: "kern" 1
+    overflow-x: hidden
+
+body
+    margin: 0
+    color: $cText
+
+a
+    color: inherit
+    text-decoration: none
+    &:hover
+        text-decoration: underline
+
+nav.primary
+    background-color: $cText
+
+    &::-webkit-scrollbar
+        width: .5em
+        height: .5em
+    &::-webkit-scrollbar-thumb
+        background-color: mix($cBackground, $cText, 75%)
+        border-radius: .25em
+    &::-webkit-scrollbar-track
+        background-color: mix($cAccent, $cText, 37.5%)
+
+    ul
+        margin: 0
+        padding: 0
+        overflow: hidden
+        max-height: 25em //Big enough that the menu wont hit this limit
+        +transition(max-height 0.2s)
+        &.hidden
+            max-height: 0
+
+    li
+        list-style-type: none
+        box-shadow: 0 -1px 0 0 darken($cText, 8%), 0 1px 0 0 lighten($cText, 4%)
+
+        a
+            color: $cBackground
+            padding: 0.5em 1em
+            display: block
+            +transition(background-color 0.2s)
+            &:hover
+                background-color: mix($cAccent, $cText, 75%)
+            &.active
+                background-color: mix($cAccent, $cText, 50%)
+                text-decoration: none
+                &:hover
+                    cursor: default
+            &:visited
+                color: mix($cBackground, $cText, 90%)
+
+.contactinfo
+    padding: 0 1em 1em
+    +transition(padding-top 1s)
+    text-align: left
+    color: $cBackground
+    max-width: $wSidebar
+    margin: auto
+    +type-scale($delta, $font-base, '#{$type-scale-unit-value}', $measure)
+    margin-bottom: 0
+    .logo
+        +svg-wfallback(CamJC_logo_crop)
+        height: 6em
+        background-repeat: no-repeat
+        background-size: contain
+        -ms-behavior: url(/assets/javascripts/vendor/backgroundsize.min.htc)
+        margin-bottom: 1em
+        background-position: center bottom
+        display: block
+    .details
+        font-weight: 300
+
+#nav-toggle
+    -webkit-touch-callout: none
+    +user-select(none)
+    float: left
+    background-color: $cBackground
+    color: $cAccent
+    +border-radius(25%)
+    width: 2em
+    height: 2em
+    line-height: 2em
+    text-align: center
+    position: absolute
+    top: 9.5em
+    right: 1em
+    &:hover
+        text-decoration: none
+    span
+        font-size: 2em
+        line-height: 0.8em
+
+.website h2
+    display: none
+
+.container.website, .container.about
+    box-shadow: inset 0 -0.5em 0 0 $cAccent
+    //border-bottom:0.2em solid $cAccent
+.post
+    padding: 0.5em
+    +clearfix
+    font-weight: 300
+    max-width: 21em
+    margin: auto
+    h1
+        clear: both
+        color: $cText
+        +type-scale($delta, $font-base, '#{$type-scale-unit-value}', $measure)
+        a
+            color: $cText
+            &:hover
+                color: $cAccent
+    h2
+        font-style: italic
+        box-shadow: 0 1px 0 0 white
+    h2, h3
+        color: $cText
+        font-weight: 300
+        +type-scale($zeta, $font-base, '#{$type-scale-unit-value}', $measure)
+        margin-bottom: 0
+    h3
+        font-weight: 700
+        &> span
+            float: right
+    img
+        max-width: 100%
+        height: auto
+        margin: 1em auto
+        display: block
+        box-shadow: 0 0 0 0.25em #333
+        &.large
+            margin-left: 0
+            margin-bottom: 1em
+    li
+        margin-left: -0.65em
+    .small_images
+        width: 1333px
+        width: calc(1280px + 3em)
+        max-width: 100%
+    .description
+        max-width: 50em
+        clear: both
+        +type-scale(12, $font-base, '#{$type-scale-unit-value}', $measure)
+        p
+            text-align: justify
+        a
+            color: mix($cAccent, $cText, 42%)
+
+.index
+    padding: 0.5em
+    h1
+        +type-scale($delta, $font-base, '#{$type-scale-unit-value}', $measure)
+    h2
+        +type-scale($epsilon, $font-base, '#{$type-scale-unit-value}', $measure)
+        font-weight: 300
+
+/* ==========================================================================
+   Animation Module
+   ========================================================================== */
+
+.anim-parent
+    -webkit-perspective: 500px // For Work Available Hover
+    perspective: 500px
+    -webkit-perspective-origin: 30% 50%
+    perspective-origin: 30% 50%
+
+.anim-child
+    -webkit-transform-origin: top left
+    transform-origin: top left
+
+.anim-swing
+    -webkit-animation: swing 3s 1s ease-in-out
+    animation: swing 3s 1s ease-in-out
+
+@-webkit-keyframes swing
+    0%, 100%
+        -webkit-transform: rotateX(0deg)
+    30%
+        -webkit-transform: rotateX(-10deg)
+    50%
+        -webkit-transform: rotateX(35deg)
+    70%
+        -webkit-transform: rotateX(-10deg)
+    85%
+        -webkit-transform: rotateX(5deg)
+
+@keyframes swing
+    0%, 100%
+        transform: rotateX(0deg)
+    30%
+        transform: rotateX(-10deg)
+    50%
+        transform: rotateX(35deg)
+    70%
+        transform: rotateX(-10deg)
+    85%
+        transform: rotateX(5deg)
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media (min-width: 600px)
+    .post
+        max-width: 32em
+        padding: 1em
+        h1
+            +type-scale($gamma, $font-base, '#{$type-scale-unit-value}', $measure)
+        .description
+            +type-scale($zeta, $font-base, '#{$type-scale-unit-value}', $measure)
+    .index
+        padding: 1em
+        h1
+            +type-scale($alpha, $font-base, '#{$type-scale-unit-value}', $measure)
+        h2
+            +type-scale($gamma, $font-base, '#{$type-scale-unit-value}', $measure)
+
+@media (min-width: 840px)
+    .contactinfo
+        text-align: right
+        +type-scale($epsilon, $font-base, '#{$type-scale-unit-value}', $measure)
+        margin-bottom: 0
+        .logo
+            height: 5em
+    nav.primary
+        position: fixed
+        left: 0
+        margin: 0
+        padding: 0
+        width: $wSidebar
+        height: 100%
+        overflow-y: auto
+        box-shadow: 0.5em 0 0 0 $cAccent
+        ul.hidden
+            max-height: 100%
+        li
+            a
+                padding: 1em 1em
+    .container
+        margin-left: $wSidebar
+    .post
+        padding: 2em
+        h2, h3
+            +type-scale($epsilon, $font-base, '#{$type-scale-unit-value}', $measure)
+        img
+            +lichtenstein(#f2f2f2, #8f8f8f)
+            &.large
+                margin-bottom: 4em
+    .website h2
+        display: block
+    .about h2
+        margin-bottom: 0
+        margin-top: 2em
+    #nav-toggle
+        display: none
+    .index
+        padding: 2em
+        h1
+            +type-scale($beta, $font-base, '#{$type-scale-unit-value}', $measure)
+@media (min-width: 1200px)
+    .post
+        max-width: 50em
+        padding: 3em
+        h1
+            +type-scale($mega, $font-base, '#{$type-scale-unit-value}', $measure)
+        h2, h3
+            +type-scale($gamma, $font-base, '#{$type-scale-unit-value}', $measure)
+        .description
+            +type-scale($delta, $font-base, '#{$type-scale-unit-value}', $measure)
+            margin: 0 0 4em
+        img
+            &.small
+                +span-columns(1, 2)
+                &.last
+                    +omega
+    .index
+        padding: 3em
+        h1
+            +type-scale($mega, $font-base, '#{$type-scale-unit-value}', $measure)
+        h2
+            +type-scale($beta, $font-base, '#{$type-scale-unit-value}', $measure)
+@media (min-width: 1500px)
+    .index
+        h1
+            +type-scale($tera, $font-base, '#{$type-scale-unit-value}', $measure)
+        h2
+            +type-scale($alpha, $font-base, '#{$type-scale-unit-value}', $measure)
