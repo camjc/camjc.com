@@ -6,19 +6,25 @@ link: /assets/files/Cameron_Chamberlain_Resume.pdf
 noextralink: "true"
 ---
 
-Lead Front–End Developer
+Senior Developer (Front–End)
 ------------------------
 
-<!-- TODO: Rewrite -->
-
-Offering a first class honours degree in Visual Arts, university level teaching experience in web development/design, media and research units, as well as both formal and tacit knowledge from client work over the last seven years. Using education and passion for design to provide the strategy, layout and implementation necessary to provide great experiences across all platforms and drive profitability.
+Offering proven web application development practices. Using formal and tacit knowledge to shape maintainable code and deliver great experiences. Promoting a collaborative environment, using design and programming together to benefit the user.
 
 <br/>
 
 Employment
 ----------
 
-### [Adslot] <span>Dec 2015–Present</span>
+### [ahm] <span>April 2016–Present</span>
+
+Senior Developer
+
+### [Adslot] <span>Feb–April 2016</span>
+
+Senior Developer
+
+### [Adslot] <span>Dec 2015–Jan 2016</span>
 
 Lead Front–End Developer
 
@@ -72,10 +78,25 @@ Education
 
 <br/>
 
+Recognition
+----------
+
+### [Adslot] <span>November 2015</span>
+
+CEO's award: “Inaugural Scuti Star for Innovation”
+
+“Cam was a key contributor in rethinking our approach to the important campaign management interface including the briefing feature set. Cam was able to draw ideas and inspiration from other frameworks and apply them in new ways to solve the challenge of rebuilding the most complex interface in Adslot, while simplifying it's internal structure to make it far easier to reason.”
+
+### [Australian National University] <span>2011</span>
+
+ANU Honours Scholarship
+
+<br/>
+
 Skills
 ------
 
-**Front–End** – [AngularJS], [React], [Stylus], [SASS], [SMACSS], HTML5, responsive CSS3, SVG, [jQuery], WebGL using [Three.js], [Bower], [Ember].
+**Front–End** – [React], [elm], [AngularJS], [Stylus], [SASS], [SMACSS], HTML5, responsive CSS3, SVG, [jQuery], WebGL using [Three.js], [Bower], [Ember].
 
 **Full–Stack** – [CoffeeScript], JavaScript, [lodash], [Moment.js], [Jade], [API integration], [Gulp].
 
@@ -85,6 +106,7 @@ Skills
 
 **Design** – colour theory, grid systems, typography, communication, [research], [animation], [drawing], [photography].
 
+[ahm]: https://ahm.com.au/ "ahm"
 [Adslot]: http://www.adslot.com/ "Adslot"
 [Packt Publishing]: https://www.packtpub.com/ "Packt Publishing"
 [Three.js Cookbook]: https://www.packtpub.com/web-development/threejs-cookbook "Three.js Cookbook"
@@ -100,6 +122,7 @@ Skills
 [Three.js]: http://threejs.org/ "Three.js"
 [Bower]: http://bower.io/ "A package manager for the web"
 [Ember]: http://emberjs.com/ "Ember.js"
+[elm]: http://elm-lang.org/ "elm"
 [React]: https://facebook.github.io/react/ "A JavaScript library for building user interfaces"
 [CoffeeScript]: http://coffeescript.org/ "A little language that compiles into JavaScript"
 [lodash]: https://lodash.com/ "A JavaScript utility library delivering consistency, modularity, performance, &amp; extras."

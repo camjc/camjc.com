@@ -65,7 +65,7 @@ $indent-val: 1.5em !default;
 // divide a given font-size by base font-size & return a relative value
 
 @function context-calc($scale, $base, $value) {
-	@return ($scale/$base)#{$value};
+	@return unquote("#{$scale / $base}#{$value}");
 }
 
 
@@ -74,7 +74,7 @@ $indent-val: 1.5em !default;
 // divide 1 unit of measure by given font-size & return a relative em value
 
 @function measure-margin($scale, $measure, $value) {
-	@return ($measure/$scale)#{$value};
+	@return unquote("#{$measure / $scale}#{$value}");
 }
 
 
@@ -93,7 +93,7 @@ $indent-val: 1.5em !default;
 @mixin type-scale($scale, $base, $value, $measure:"") {
 	// If 'rem' is used as a $value then provide a px fallback.
 	@if $value == rem {
-		font-size: $scale#{px};
+		font-size: unquote("#{$scale}px");
 	}
 	font-size: context-calc($scale, $base, $value);
 	@if $measure != "" {
@@ -107,9 +107,10 @@ $indent-val: 1.5em !default;
 
 @mixin base-type($font-weight, $line-height, $font-size, $font-family...) {
 	@if $serif-boolean {
-		font: $font-weight #{$font-size}%/#{$line-height} $font-family;
-	}@else {
-		font: $font-weight #{$font-size}%/#{$line-height} $font-family-sans;
+		font: unquote("#{$font-weight} #{$font-size}%/#{$line-height} #{$font-family}");
+	}
+	@else {
+		font: unquote("#{$font-weight} #{$font-size}%/#{$line-height} #{$font-family-sans}");
 	}
 }
 
