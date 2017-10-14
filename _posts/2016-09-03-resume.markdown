@@ -8,6 +8,7 @@ noextralink: "true"
 
 Senior Developer (Front–End)
 ------------------------
+<!-- TODO: Rewrite to focus on leadership -->
 
 Offering proven web application development practices. Using formal and tacit knowledge to shape maintainable code and deliver great experiences. Promoting a collaborative environment, using design and programming together to benefit the user.
 
@@ -60,6 +61,7 @@ Sales Assistant
 
 Education
 ---------
+<!-- TODO: Maybe mention Trusted Advisor training from April 2017. -->
 
 ### [Australian National University] <span>2011</span>
 
