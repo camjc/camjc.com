@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Ahm"
+title:  "ahm"
 tagline: "Health insurance made uncomplicated"
 categories: application
 technologies:
@@ -48,13 +48,6 @@ I research best-practices and apply new knowledge in collaboration with the enti
 In these ways I help lead my own, and my colleagues’ growth and confidence within the team.
 
 #### Code quality
-OMS Project delivered on time, on budget, to business case scope Reduction in transactional call types per the OMS business case
-Code quality
-Linting.
-Dependencies upgrades. Cleanups / refactoring. Coverage increasing over time.
-Shared UI components
-Setup architecture for reusable shared UI components. Ensure no major technical debts created.
-Foster a culture of using this approach for BAU/daily routine.
 I have implemented new linting rules to enable quick feedback of best practices and in-house style standards. This helps our code base stay homogenous, making it easier for developers to understand code intent. It also highlights potentially problematic language use, requiring the developer to avoid these pitfalls. Since the feedback comes in-editor instead of during code review, it makes it quicker for us to develop, and quicker to code review.
 I have worked with our delivery manager to ensure that dependency upgrades don’t languish. I set up a re-occurring task to update those that are easy. During this task the developer doing it must create new tasks for any dependency upgrades that aren’t quick, and we can then prioritise those in our backlog for later sprints.
 I have fostered a culture of maintainability of our front-end code in concert with Dmitry’s expectations about our overall maintainability. Where appropriate we create extra cards for cleanup and refactor, but as a general policy try to leave our code better than when we found it. This stops us accumulating significant technical debt and ensuring that our codebase is at production quality.
