@@ -10,7 +10,7 @@ ruby RUBY_VERSION
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
 gem "jekyll", "3.2.1"
-gem "nokogiri"
+gem "nokogiri", ">= 1.10.5"
 gem "text-hyphen"
 gem "jekyll-compass"
 gem "susy"
